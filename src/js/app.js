@@ -43,29 +43,9 @@ async function onSubmit() {
     await login(inputEmail.value, inputPassword.value);
     form.reset();
     //*show success notify
+    notify({ msg: "Login success", className: "alert-success" });
   } catch (err) {
     //*show error notify
+    notify({ msg: "Login failed", className: "alert-danger" });
   }
 }
-
-notify({
-  mas: "some notification!!",
-  className: "alert-primary",
-});
-
-notify({
-  mas: "some notification 3",
-  className: "alert-danger",
-});
-notify({
-  mas: "some notification 2",
-  className: "alert-primary",
-});
-notify({
-  mas: "some notification 1",
-  className: "alert-warning",
-});
-notify({
-  mas: "some notification 0",
-  className: "alert-danger",
-});
